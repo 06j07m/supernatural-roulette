@@ -1,13 +1,11 @@
 """
-generates a random episode
+generator and other functions
 """
 
 import random
-import openpyxl as op
+import openpyxl
 from openpyxl import load_workbook
 
-# Name of data file
-FILEPATH = "files/episodes.xlsx"
 
 # Constants for selecting crack episodes
 INCL = 0
@@ -87,6 +85,9 @@ def get_all_episodes(filename:str):
         # add to list - order not guaranteed
         all_eps.add(new_ep)
 
+    # close file
+    ep_workbook.close()
+
     return all_eps
 
 
@@ -118,3 +119,30 @@ def get_random_episode(all_eps:set,
 
     # return random episode
     return random.choice(eps_to_choose_from)
+
+
+def parse_data(seasons_data:str, crack_data:str):
+    """
+    data: whatever was entered in the form; separate seasons with comma; connected seasons with dash
+    crack_data: whatever was selected in the form (0,1,2)
+    """
+    seasons_int = []
+
+    # split all the separate seasons
+    seasons_str = seasons_data.split(",")
+
+    # go through and convert to integers
+    for i in seasons_str:
+        if "-" in i:
+            # is a range, so split get start and end season
+            start, end = i.split("-")
+            start = int(start)
+            end = int(end)
+
+            # add all numbers in range to list
+            seasons_int.extend([j for j in range(start, end+1)])
+        else:
+            # single season, so just add the integer
+            seasons_int.append(int(i))
+
+    return seasons_int, int(crack_data)
