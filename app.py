@@ -21,7 +21,7 @@ def home():
     ep = ""
     if request.method == 'POST':
         # check for post request
-        if "submit-controls" in request.form:
+        if "form1" in request.form:
             # if form is submitted, get entered data
             input_seasons = request.form["seasons"]
             input_crack = request.form["crack"]

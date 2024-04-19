@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -10,23 +11,31 @@
 
 <body>
     <header>
-        <h1>SPN Roulette</h1>
+        <h1 id="title">SPN Roulette</h1>
     </header>
+
     <main>
         <section id="controls">
             <form id="controls-form" method="POST">
-                <label for="seasons">Seasons:</label>
-                <input name="seasons" type="text" />
-                Separate seasons with a comma and indicate ranges with a dash
-                <br />
-                <label for="crack">Crack episodes:</label>
-                <input checked="checked" name="crack" type="radio" value="0" /> Include 
-                <input name="crack" type="radio" value="1" /> Exclude 
-                <input name="crack" type="radio" value="2" /> Crack episodes only
-                <br />
-                <input name="submit-controls" type="submit" value="Generate" />
+                <div id="controls-form-seasons">
+                    <label for="seasons">Seasons:</label><br />
+                    <input name="seasons" type="text" value="1-12" /><br />
+                    Separate seasons with a comma and indicate ranges with a dash
+                </div>
+                
+                <div id="controls-form-crack">
+                    <label for="crack">Crack episodes:</label><br />
+                    <input checked="checked" name="crack" type="radio" value="0" /> Include<br />
+                    <input name="crack" type="radio" value="1" /> Exclude<br />
+                    <input name="crack" type="radio" value="2" /> Crack episodes only
+                </div>
+                
+                <div id="controls-form-submit">
+                    <input name="form1" type="submit" value="Generate" />
+                </div>
             </form>
         </section>
+        
         <section id="output">
             <p id="output-text">
                 {{ generated_ep }}

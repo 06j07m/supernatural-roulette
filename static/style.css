@@ -1,3 +1,48 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body, input[type=submit] {
+    font-family: "Comic Sans MS", sans-serif;
+
+}
+
+#controls-form-seasons, #controls-form-crack {
+    margin: 12px 0;
+}
+
+#controls-form label {
+    font-size: large;
+}
+
+input[type=text] {
+    padding: 8px 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=radio] {
+    margin: 4px 0;
+}
+
+input[type=submit] {
+    padding: 8px 12px;
+    margin: 8px 2px;
+    box-sizing: border-box;
+    
+    background-color: #FAFBFC;
+    
+    border: 1px solid #b1b8bf;
+    border-radius: 6px;
+
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+
+}
+
+input[type=submit]:hover {
+    background-color: #F3F4F6;
+
+    transition-duration: 0.1s;
+}
+
+input[type=submit]:active {
+    background-color: #EDEFF2;
+    
+    transition: none 0s;
 }
