@@ -14,10 +14,14 @@
     </header>
     <main>
         <section id="controls">
-            <form id="controls-form">
-                Seasons: <input name="seasons" type="text" />
+            <form id="controls-form" method="POST">
+                <label for="seasons">Seasons:</label>
+                <input name="seasons" type="text" />
                 <br />
-                Crack episodes: <input checked="checked" name="is-crack" type="radio" value="1" /> Include <input name="is-crack" type="radio" value="2" /> Exclude <input name="is-crack" type="radio" value="3" /> Crack episodes only
+                <label for="crack">Crack episodes:</label>
+                <input checked="checked" name="crack" type="radio" value="0" /> Include 
+                <input name="crack" type="radio" value="1" /> Exclude 
+                <input name="crack" type="radio" value="2" /> Crack episodes only
                 <br />
                 <input type="submit" value="Generate" />
             </form>
