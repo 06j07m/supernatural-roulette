@@ -61,9 +61,8 @@ def get_all_episodes(filename:str):
     ep_sheet = ep_workbook[ep_workbook.sheetnames[0]]
 
     # get first and last row that has data (not including title)
-    first_row = 46
+    first_row = 2
     last_row = ep_sheet.max_row
-    last_row = 83 #TESTING PURPOSES
     first_column = ep_sheet.min_column
     last_column = ep_sheet.max_column
 
@@ -96,28 +95,25 @@ def get_random_episode(all_eps:set,
                        crack:int = INCL):
     """
     seasons: list with integers of seasons to be included; default is all
-    crack: 1 (include crack and regular) or 2 (exclude crack, only regular) or 3 (crack episodes only, no regular); default is 1
+    crack: 0 (include crack and regular) or 1 (exclude crack, only regular) or 2 (crack episodes only, no regular); default is 0
     """
-    # add all episodes that to randomly choose from to a new list
+    # add all episodes that fit request to a new list
     eps_to_choose_from = []
 
     for ep in all_eps:
-        # default to including in the list
-        to_choose_from = True
 
-        # exclude from list based on parameters from the form
-        if crack == EXCL and ep.get_is_crack():
-            to_choose_from = False
+        if ep.get_season() not in seasons:
+            # only keep episodes in requested seasons
+            continue
+        elif crack == EXCL and ep.get_is_crack():
+            # only keep episodes that fit the requested "crack" parameter
+            continue
         elif crack == ONLY and not ep.get_is_crack():
-            to_choose_from = False
-        elif ep.get_season() not in seasons:
-            to_choose_from = False
+            continue
 
         # add episode to list if needed
-        if to_choose_from:
-            eps_to_choose_from.append(ep)
+        eps_to_choose_from.append(ep)
 
-    # return random episode
     return random.choice(eps_to_choose_from)
 
 

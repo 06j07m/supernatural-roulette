@@ -15,7 +15,7 @@ FILEPATH = "files/episodes.xlsx"
 all_eps = main.get_all_episodes(FILEPATH)
 
 
-# display main page html at url "/"
+# # display main page html at url "/"
 @app.route("/", methods=['GET','POST'])
 def home():
     ep = ""
