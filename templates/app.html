@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Hello, world!</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    <meta charset="UTF-8" />
+    <title>Hello, world!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
 </head>
+
 <body>
-  <header>
-    <h1>spn roulette</h1>
-  </header>
-  <main>
-    <section id="controls">
-
-    </section>
-    <section id = "output">
-
-    </section>
-  </main>
-  <footer>
-    <p>【・ヘ・】</p>
-  </footer>
+    <header>
+        <h1>SPN Roulette</h1>
+    </header>
+    <main>
+        <section id="controls">
+            <form id="controls-form">
+                Seasons: <input name="seasons" type="text" />
+                <br />
+                Crack episodes: <input checked="checked" name="is-crack" type="radio" value="1" /> Include <input name="is-crack" type="radio" value="2" /> Exclude <input name="is-crack" type="radio" value="3" /> Crack episodes only
+                <br />
+                <input type="submit" value="Generate" />
+            </form>
+        </section>
+        <section id="output">
+        </section>
+    </main>
 </body>
+
 </html>
