@@ -19,6 +19,8 @@ all_eps = main.get_all_episodes(FILEPATH)
 @app.route("/", methods=['GET','POST'])
 def home():
     ep = ""
+    # default form values
+    inputs = ["1-12", "0"]
     if request.method == 'POST':
         # check for post request
         if "form1" in request.form:
@@ -33,7 +35,12 @@ def home():
             try:
                 ep = main.get_random_episode(all_eps, seasons, crack)
                 print(ep)
+            # print error message if can't be generated
             except IndexError:
                 ep = "Error: no episodes according to current filters"
 
-    return render_template("app.html", generated_ep = ep)
+            inputs = [input_seasons, input_crack]
+
+    return render_template("app.html", 
+                           generated_ep = ep, 
+                           inputs = inputs)

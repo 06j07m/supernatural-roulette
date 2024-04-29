@@ -19,15 +19,15 @@
             <form id="controls-form" method="POST">
                 <div id="controls-form-seasons">
                     <label for="seasons">Seasons:</label><br />
-                    <input name="seasons" type="text" value="1-12" /><br />
+                    <input name="seasons" type="text" value="{{ inputs[0] }}" /><br />
                     Separate seasons with a comma and indicate ranges with a dash
                 </div>
                 
                 <div id="controls-form-crack">
                     <label for="crack">Crack episodes:</label><br />
-                    <input checked="checked" name="crack" type="radio" value="0" /> Include<br />
-                    <input name="crack" type="radio" value="1" /> Exclude<br />
-                    <input name="crack" type="radio" value="2" /> Crack episodes only
+                    <input {% if inputs[1] == "0" %} checked="checked" {% endif%} name="crack" type="radio" value="0" /> Include<br />
+                    <input {% if inputs[1] == "1" %} checked="checked" {% endif%} name="crack" type="radio" value="1" /> Exclude<br />
+                    <input {% if inputs[1] == "2" %} checked="checked" {% endif%} name="crack" type="radio" value="2" /> Crack episodes only
                 </div>
                 
                 <div id="controls-form-submit">
