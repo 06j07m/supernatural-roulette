@@ -113,12 +113,12 @@ def get_random_episode(all_eps:set,
 
         # add episode to list if needed
         eps_to_choose_from.append(ep)
-
+        
     return random.choice(eps_to_choose_from)
 
 
 def parse_data(seasons_data:str, crack_data:str):
-    """
+    """ 
     data: whatever was entered in the form; separate seasons with comma; connected seasons with dash
     crack_data: whatever was selected in the form (0,1,2)
     """

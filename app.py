@@ -30,7 +30,10 @@ def home():
             seasons, crack = main.parse_data(input_seasons, input_crack)
 
             # generate random episode
-            ep = main.get_random_episode(all_eps, seasons, crack)
-            print(ep)
+            try:
+                ep = main.get_random_episode(all_eps, seasons, crack)
+                print(ep)
+            except IndexError:
+                ep = "Error: no episodes according to current filters"
 
     return render_template("app.html", generated_ep = ep)
