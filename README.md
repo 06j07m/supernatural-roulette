@@ -1,17 +1,12 @@
 # Supernatural Roulette
 
-[About](#about) ◈ [Features](#Features) ◈ [Installation](#installation) ◈ [How to use](#how-to-use)
+[About](#about) ◈ [Features](#features) ◈ [Installation](#installation) ◈ [How to use](#how-to-use)
 
 <img align="center" src="display/sample-no_tool_tip.png" alt="screenshot of generator form" />
 
 ## About
 
-Supernatural Roulette is a random episode generator for the CW series Supernatural (2005-2020), with options to generate from certain seasons and to include/exclude "crack" (meta) episodes.
-
-## Features
-
-- **Filter by season:** Choose specific seasons to include in the randomization; all others will be excluded
-- **Filter "crack" episodes:** Choose to include, exclude, or only randomize from the meta episodes. A list of crack episodes can be found in *files* > *episodes-crack.txt*
+Have you ever wanted to reminisce the 2000's with an episode from the Tumblr-famous Supernatural? You're in the right place! Supernatural Roulette is a random episode generator for the CW series Supernatural (2005-2020), with options to generate from certain seasons and to include/exclude "crack" (meta) episodes.
 
 ## Installation
 
@@ -41,10 +36,17 @@ Supernatural Roulette is a random episode generator for the CW series Supernatur
 4. [Optional] Select option for "crack" episodes by clicking on the buttons
 
     - `Include` means all episodes, including "crack" ones, will be included
-    
+
     - `Exclude` means only **non**-"crack" episodes will be included
 
     - `Crack episodes only` means only "crack" episodes will be included
 
 5. Click "Generate". The generated episode will appear below, in the format `<season number> <episode number> <episode name>`
 6. Click "Generate" again to re-generate with the same filters, or modify the filters and click "Generate" again
+
+## Features
+
+- **Filter by season:** Choose specific seasons to include in the randomization; all others will be excluded
+- **Filter "crack" episodes:** Choose to include, exclude, or only randomize from the meta episodes. A list of crack episodes can be found in *files* > *episodes-crack.txt*
+
+![Crowley "You're welcome" gif](display/yourewelcome.gif)
