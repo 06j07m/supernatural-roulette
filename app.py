@@ -29,15 +29,18 @@ def home():
             input_crack = request.form["crack"]
 
             # parse the data
-            seasons, crack = main.parse_data(input_seasons, input_crack)
-
-            # generate random episode
             try:
-                ep = main.get_random_episode(all_eps, seasons, crack)
-                print(ep)
-            # print error message if can't be generated
-            except IndexError:
-                ep = "Error: no episodes according to current filters"
+                seasons, crack = main.parse_data(input_seasons, input_crack)
+                # generate random episode
+                try:
+                    ep = main.get_random_episode(all_eps, seasons, crack)
+                    print(ep)
+                # print error message if can't be generated
+                except IndexError:
+                    ep = "Error: no episodes according to current filters"
+            # if the seasons format is not right
+            except ValueError:
+                ep = "Error: invalid format for \"Seasons\""
 
             inputs = [input_seasons, input_crack]
 
