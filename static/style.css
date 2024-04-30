@@ -8,9 +8,41 @@ body, input[type=submit] {
     margin: 12px 0;
 }
 
+#tooltip {
+    position:relative;
+
+    border-bottom:1px dashed #000;
+
+    cursor: pointer;
+}
+
+#tooltip:after {
+    content: attr(data-text);
+
+    position: absolute;
+    
+    width:max-content;
+    
+    margin-left:8px;
+    padding: 8px;
+
+    border-radius: 6px;
+
+    background-color: #EDEFF2;
+
+    font-size: small;
+
+    display: none;
+}
+
+#tooltip:hover:after {
+    display: inline;
+}
+
 input[type=text] {
     padding: 8px 4px;
     margin: 8px 0;
+    margin-right: 8px;
     box-sizing: border-box;
 
     border: 1px solid #898E92;
