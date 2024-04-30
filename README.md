@@ -49,4 +49,4 @@ Have you ever wanted to reminisce the 2000's with an episode from the Tumblr-fam
 - **Filter by season:** Choose specific seasons to include in the randomization; all others will be excluded
 - **Filter "crack" episodes:** Choose to include, exclude, or only randomize from the meta episodes. A list of crack episodes can be found in *files* > *episodes-crack.txt*
 
-![Crowley "You're welcome" gif](display/yourewelcome.gif)
+![Crowley "You're welcome" gif](display/youre-welcome.gif)
