@@ -2,7 +2,7 @@
 
 [About](#about) ◈ [Features](#features) ◈ [Installation](#installation) ◈ [How to use](#how-to-use)
 
-<img align="center" src="display/sample-no_tool_tip.png" alt="screenshot of generator form" />
+<img src="display/sample-no_tool_tip.png" alt="screenshot of generator form" />
 
 ## About
 
@@ -49,4 +49,4 @@ Have you ever wanted to reminisce the 2000's with an episode from the Tumblr-fam
 - **Filter by season:** Choose specific seasons to include in the randomization; all others will be excluded
 - **Filter "crack" episodes:** Choose to include, exclude, or only randomize from the meta episodes. A list of crack episodes can be found in *files* > *episodes-crack.txt*
 
-<img align="center" src="display/youre-welcome.gif" alt="Crowley You're welcome gif" />
+<img src="display/youre-welcome.gif" alt="Crowley You're welcome gif" />
