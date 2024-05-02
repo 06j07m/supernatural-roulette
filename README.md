@@ -1,6 +1,6 @@
 # Supernatural Roulette
 
-[About](#about) ◈ [Features](#features) ◈ [Installation](#installation) ◈ [How to use](#how-to-use)
+[About](#about)◈ [Installation](#installation) ◈ [How to use](#how-to-use) ◈ [Features](#features) 
 
 <img src="display/sample-no_tool_tip.png" alt="screenshot of generator form" />
 
