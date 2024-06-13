@@ -20,7 +20,7 @@ all_eps = main.get_all_episodes(FILEPATH)
 def home():
     ep = ""
     # default form values
-    inputs = ["1-12", "0"]
+    inputs = ["1-15", "0"]
     if request.method == 'POST':
         # check for post request
         if "form1" in request.form:
@@ -34,7 +34,6 @@ def home():
                 # generate random episode
                 try:
                     ep = main.get_random_episode(all_eps, seasons, crack)
-                    print(ep)
                 # print error message if can't be generated
                 except IndexError:
                     ep = "Error: no episodes according to current filters"

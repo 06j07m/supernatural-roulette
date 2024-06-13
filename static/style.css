@@ -1,109 +1,210 @@
-body, input[type=submit] {
-    font-family: Arial, Helvetica, sans-serif;
+.outerbox {
+    /* border */
+    border-radius: 28px;
 
-    background-color: #FFFFFF;
+    /* shadow */
+    box-shadow: #949494 5px 5px 20px;
+
+    /* margin and centre */
+    width: 600px;
+    margin: 56px auto;
+
+    /* padding */
+    padding: 12px;
+
+    /* body font */
+    font-family: "Franklin Gothic Book", Arial, sans-serif;
+    color: #151515;
 }
 
-#controls-form-seasons, #controls-form-crack {
-    margin: 12px 0;
+.innerbox {  
+    /* border with gradient */
+    border: 5px solid transparent;
+    border-radius: 16px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(#198d8a, #1e198d) border-box;
+    /* background-origin: border-box; */
+    /* background-clip: padding-box, border-box; */
+
+    /* padding */
+    padding: 24px;
+
 }
 
-#tooltip {
-    position:relative;
+.title {
+    /* title font */
+    font-family: 'Franklin Gothic Medium', "Arial Black", sans-serif;
+    font-size: 32pt;
 
-    border-bottom:1px dashed #000;
+    /* custom margin */
+    margin: 24px 0px;
+}
 
+.subtitle {
+    /* subtitle font */
+    font-family: 'Franklin Gothic Medium', "Arial Black", sans-serif;
+    font-size: 24pt;
+
+    /* remove margin */
+    margin: 0px;
+}
+
+.form-label {
+    /* input label font */
+    font-size: 18pt;
+
+    /* add top margin */
+    display: block;
+    margin-top: 24px;
+}
+
+.form-text {
+    /* make it wider */
+    width: 50%;
+
+    /* regular border */
+    border: 2px solid;
+    border-color: #949494;
+    border-radius: 8px;
+
+    /* padding & margin*/
+    padding: 12px 8px;
+    margin: 12px 0px;
+    margin-right: 8px;
+
+    /* individually set font */
+    font-family: inherit;
+    font-size: 14pt;
+}
+
+.form-text:focus {
+    /* remove black outline */
+    outline: none;
+
+    /* active border */
+    border-color: #198d8a;
+}
+
+#tooltip { 
+    /* font for tooltip */
+    font-size: 14pt;
+    color:#198d8a;
+    
+    /* border circle */
+    padding: 0px 6px;
+    border: 2px solid #198d8a;
+    border-radius: 50px;
+    
+    /* make pointer the hand */
     cursor: pointer;
 }
 
 #tooltip:after {
+    /* tooltip text content */
     content: attr(data-text);
 
+    /* make it float */
     position: absolute;
     
-    width:max-content;
-    
-    margin-left:8px;
-    padding: 8px;
+    /* make it not too wide */
+    width: 180px;
 
+    /* margin and padding */
+    margin-left:24px;
+    padding: 12px;
+
+    /* round border */
     border-radius: 6px;
 
-    background-color: #EDEFF2;
+    /* background colour */
+    background-color: #fafafa;
 
-    font-size: small;
+    /* font */
+    font-size: 12pt;
+    color:#151515;
 
+    /* hide unless hover */
     display: none;
 }
 
 #tooltip:hover:after {
+    /* show tooltip text on hover */
     display: inline;
 }
 
-input[type=text] {
-    padding: 8px 4px;
-    margin: 8px 0;
-    margin-right: 8px;
-    box-sizing: border-box;
-
-    border: 1px solid #898E92;
-    border-radius: 6px;
-
-    font-size:inherit;
-}
-
 #horizontal-radio {
-    display: inline-block;
-    overflow: hidden;
-  
-    margin: 8px 0;
+    /* make div resize to fit content*/
+    display: flex;
     
-    border: 1px solid #898E92;
-    border-radius: 6px;
+    /* margin */
+    margin: 12px 0px;
 }
 
-input[type=radio] {
+.form-radio {
+    /* don't show radio circles */
     display: none;
-    position: absolute;
     visibility: hidden;
 }
 
-input[type=radio]:checked + label{
-    font-weight: bold;
-}
-  
-label + input[type=radio] + label {
-    border-left: solid 1px #898E92;
-}
-
-#horizontal-radio label {
-    display: inline-block;
-  
-    padding: 4px 8px;
+.form-radio + label {
+    /* regular radio font */
+    font-family: "Franklin Gothic Book", Arial, sans-serif;
+    color: #949494;
     
+    /* border */
+    border-color: #949494;
+    border: 2px solid;
+    border-radius: 8px;
+
+    /* radio label font */
+    font-size: 14pt;
+
+    /* padding & margin */
+    padding: 6px 12px;
+    margin-right: 8px;
+
+    /* change pointer to hand */
     cursor: pointer;
 }
 
-input[type=submit] {
-    padding: 8px 8px;
-    box-sizing: border-box;
-        
-    border: 1px solid #898E92;
-    border-radius: 6px;
+.form-radio:checked + label{
+    /* selected radio font*/
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    color: #198d8a;
 
-    font-size:inherit;
-
-    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-
+    /* border */
+    border-color: #198d8a;
 }
 
-input[type=submit]:hover {
-    background-color: #F3F4F6;
+.form-button {
+    /* regular button font */
+    font-family: 'Franklin Gothic Medium', "Arial Black", sans-serif;
+    font-size: 18pt;
+    color:#1e198d;
 
-    transition-duration: 0.1s;
+    /* non hover border and fill */
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(#198d8a, #1e198d) border-box;
+
+    /* padding & margin */
+    padding: 8px 16px;
+    margin: 24px 0px;
+
+    /* make cursor the hand */
+    cursor: pointer;
 }
 
-input[type=submit]:active {
-    background-color: #EDEFF2;
-    
-    transition: none 0s;
+.form-button:hover {
+    /* hover button font */
+    color: #fafafa;
+
+    /* hover fill */
+    background: linear-gradient(#198d8a, #1e198d) border-box;
 }
+
+#output-text {
+    /* generated episode font */
+    font-size: 18pt;
+}
+
+

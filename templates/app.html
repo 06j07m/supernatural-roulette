@@ -4,43 +4,40 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Hello, world!</title>
+    <title>SPN Roulette</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 
 <body>
-    <header>
-        <h1 id="title">SPN Roulette</h1>
-    </header>
-
-    <main>
-        <section id="controls">
+    <section class="outerbox">
+        <div class="innerbox">
+            <h1 class="title">SPN Roulette</h1>
+            <h2 class="subtitle">Options</h2>
             <form id="controls-form" method="POST">
-                <div id="controls-form-seasons">
-                    <label for="seasons">Seasons:</label><br />
-                    <input name="seasons" type="text" value="{{ inputs[0] }}" /><span data-text="Separate seasons with a comma and indicate ranges with a dash" id="tooltip">?</span><br />
+                <label class="form-label" for="seasons">Seasons</label>
+                <input class="form-text" name="seasons" type="text" value="{{ inputs[0] }}" />
+                <span data-text="Separate seasons with a comma and indicate ranges with a dash" id="tooltip">?</span><br />
+                <label class="form-label" for="crack">Crack episodes</label>
+                <div id="horizontal-radio">
+                    <input class="form-radio" {% if inputs[1]=="0" %} checked="checked" {% endif%} name="crack" type="radio" value="0" id="crack-yes" />
+                    <label for="crack-yes">Include</label>
+                    <input class="form-radio" {% if inputs[1]=="1" %} checked="checked" {% endif%} name="crack" type="radio" value="1" id="crack-no" />
+                    <label for="crack-no">Exclude</label>
+                    <input class="form-radio" {% if inputs[1]=="2" %} checked="checked" {% endif%} name="crack" type="radio" value="2" id="crack-only" />
+                    <label for="crack-only">Crack episodes only</label>
                 </div>
-                
-                <div id="controls-form-crack">
-                    <label for="crack">Crack episodes:</label><br />
-                    <div id="horizontal-radio">
-                        <input {% if inputs[1] == "0" %} checked="checked" {% endif%} name="crack" type="radio" value="0" id="crack-yes" /><label for="crack-yes">Include</label><input {% if inputs[1] == "1" %} checked="checked" {% endif%} name="crack" type="radio" value="1" id="crack-no"/><label for="crack-no">Exclude</label><input {% if inputs[1] == "2" %} checked="checked" {% endif%} name="crack" type="radio" value="2" id="crack-only" /><label for="crack-only">Crack episodes only</label>
-                    </div>
-                </div>
-                
-                <div id="controls-form-submit">
-                    <input name="form1" type="submit" value="Generate" />
-                </div>
+                <input class="form-button" name="form1" type="submit" value="Generate" />
             </form>
-        </section>
-        
-        <section id="output">
+    </section>
+    <section class="outerbox">
+        <div class="innerbox">
+            <h2 class="subtitle">Generated episode</h2>
             <p id="output-text">
                 {{ generated_ep }}
             </p>
-        </section>
-    </main>
+        </div>
+    </section>
 </body>
 
 </html>
