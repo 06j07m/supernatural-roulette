@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 # Name of data file
-FILEPATH = "files/episodes.xlsx"
+FILEPATH = "data/episodes.xlsx"
 
 # open excel file and get list of all episodes
 all_eps = main.get_all_episodes(FILEPATH)
