@@ -2,7 +2,7 @@
 
 [About](#about)◈ [Installation](#installation) ◈ [How to use](#how-to-use) ◈ [Features](#features) 
 
-<img src="display/sample-no_tool_tip.png" alt="screenshot of generator form" />
+<img src="images/sample-no_tool_tip.png" alt="screenshot of generator form" />
 
 ## About
 
